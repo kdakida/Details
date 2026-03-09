@@ -1,0 +1,207 @@
+body{
+margin:0;
+background:black;
+overflow:hidden;
+font-family:Arial;
+}
+
+/* canvas */
+
+canvas{
+position:absolute;
+top:0;
+left:0;
+}
+
+/* posicion UI */
+
+.ui{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+transition:all .8s ease;
+}
+
+/* flor */
+
+.flower{
+position:relative;
+width:170px;
+height:170px;
+display:flex;
+align-items:center;
+justify-content:center;
+
+animation:flowerBeat 3s infinite ease-in-out;
+}
+
+/* latido suave */
+
+@keyframes flowerBeat{
+
+0%{ transform:scale(1); }
+
+50%{ transform:scale(1.07); }
+
+100%{ transform:scale(1); }
+
+}
+
+/* pétalos */
+
+.petal{
+
+position:absolute;
+width:70px;
+height:90px;
+
+background:linear-gradient(145deg,#7cc3ff,#4da3ff);
+
+border-radius:50%;
+
+opacity:.95;
+
+}
+
+/* posiciones */
+
+.p1{ top:-35px; }
+
+.p2{ bottom:-35px; }
+
+.p3{ left:-35px; }
+
+.p4{ right:-35px; }
+
+.p5{
+
+top:10px;
+left:-50px;
+
+transform:rotate(-45deg);
+
+}
+
+.p6{
+
+top:10px;
+right:-50px;
+
+transform:rotate(45deg);
+
+}
+
+/* centro */
+
+.center{
+
+position:absolute;
+
+width:75px;
+height:75px;
+
+background:#ffd54d;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+box-shadow:0 0 20px rgba(255,200,0,.6);
+
+}
+
+/* boton */
+
+button{
+
+border:none;
+
+background:#9b59ff;
+color:white;
+
+padding:8px 18px;
+
+border-radius:20px;
+
+font-size:16px;
+
+cursor:pointer;
+
+box-shadow:0 0 10px rgba(150,90,255,.6);
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+/* texto */
+
+.text{
+position:absolute;
+
+top:50%;
+right:4%;
+
+transform:translateY(-50%);
+
+color:white;
+
+font-size:20px;
+
+width:40vw;
+max-height:70vh;
+
+padding:25px;
+
+background:rgba(0,0,0,0.45);
+
+border-radius:12px;
+
+backdrop-filter:blur(6px);
+
+box-shadow:0 0 20px rgba(180,120,255,0.3);
+
+opacity:0;
+
+transition:opacity .5s;
+
+line-height:1.6;
+
+white-space:pre-line;
+
+overflow-y:auto;
+
+scroll-behavior:smooth;
+
+}
+
+/* SCROLL BONITO */
+
+.text::-webkit-scrollbar{
+width:10px;
+}
+
+.text::-webkit-scrollbar-track{
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+}
+
+.text::-webkit-scrollbar-thumb{
+background:linear-gradient(180deg,#ff7ac6,#9b59ff);
+border-radius:20px;
+box-shadow:0 0 8px rgba(155,89,255,0.6);
+transition:.3s;
+}
+
+.text::-webkit-scrollbar-thumb:hover{
+background:linear-gradient(180deg,#ff9ed8,#b97bff);
+box-shadow:0 0 12px rgba(155,89,255,0.9);
+}

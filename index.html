@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<script>
+if (
+    location.protocol !== "https:" &&
+    location.hostname !== "localhost" &&
+    location.hostname !== "127.0.0.1"
+) {
+    location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+}
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Un detalle peculiar</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<canvas id="canvas"></canvas>
+
+<div class="ui" id="ui">
+
+<div class="flower">
+
+<span class="petal p1"></span>
+<span class="petal p2"></span>
+<span class="petal p3"></span>
+<span class="petal p4"></span>
+<span class="petal p5"></span>
+<span class="petal p6"></span>
+
+<div class="center">
+<button onclick="activate()">Abrir</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="text" id="text"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
